@@ -1,10 +1,19 @@
-# Primes Class
+# Primes Class/Table Generation
 This includes the Primes class which gives some functionality including checking if an integer is prime, outputting the first n primes, creating a multiplication table of the first n primes, and printing said table out.
 
 
 ## Setup
-- [ ] After downloading the repository, run `bundle install` in the terminal to install the rspec gem for testing purposes.
-- [ ] In pry or a REPL of your choice, load the primes.rb file. (e.g., from pry/irb started in the repository folder enter `load "lib/primes.rb"`)
+
+### Generating a Table
+Generate a primes table with the first 10 primes using `ruby generate_table.rb`
+Note: this command can take a single integer argument afterwards for a table with the first n primes (e.g., `ruby generate_table.rb "15"`)
+
+
+### Testing/Primes Class
+After downloading the repository, run `bundle install` in the terminal to install the rspec gem for testing purposes.
+
+The Primes class is in the lib/primes folder.
+
 
 ## Usage
 The Primes class has a few useful methods as follows:
@@ -29,7 +38,7 @@ This class method calls the primes_table class method with the default value of 
 
 example
 ```
-|  |   2   3   5   7  11  13  17  19  23  29
+*  |   2   3   5   7  11  13  17  19  23  29
 --------------------------------------------
   2|   4   6  10  14  22  26  34  38  46  58
   3|   6   9  15  21  33  39  51  57  69  87

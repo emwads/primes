@@ -55,7 +55,7 @@ describe Primes do
     end
 
     it "prints a few values out" do
-      expect { Primes.print_primes_table }.to output(/34\s+38\s+46\s+58\s+/).to_stdout
+      expect { Primes.print_primes_table }.to output(/4\s+6\s+10\s+14\s+22\s+26\s+\s+34\s+38\s+46\s+58\s+/).to_stdout
     end
   end
 

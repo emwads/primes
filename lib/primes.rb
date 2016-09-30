@@ -8,7 +8,7 @@ class Primes
     end
     true
   end
-  
+
 
   def self.first_n_primes(n)
     primes = []
@@ -42,7 +42,7 @@ class Primes
     n_primes, table = prime_table( n )
     return false if n_primes.length < 1
     table_padding = Math.log10(table[n_primes.length-1].last).floor + 1 + 1
-    result = " " * (table_padding - 1 ) + "|"
+    result = "*" + " " * (table_padding - 2 ) + "|"
 
     n_primes.each{ |el| result << el.to_s.rjust( table_padding ) }
     result << "\n" + "-" * table_padding * (n_primes.length + 1) + "\n"
