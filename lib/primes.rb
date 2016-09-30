@@ -1,6 +1,28 @@
 
 class Primes
 
+  def self.is_prime?(num)
+    return false if num <= 1
+    (2..Math.sqrt(num).floor).each do |i|
+      return false if num % i == 0
+    end
+    true
+  end
+  
+
+  def self.first_n_primes(n)
+    primes = []
+    i = 2
+    while primes.length < n
+      if is_prime?(i)
+        primes.push(i)
+      end
+      i +=1
+    end
+    primes
+  end
+
+
   def self.prime_table( n = 10 )
     n_primes = first_n_primes(n)
     table = Array.new(n) { Array.new(n) }
@@ -13,27 +35,6 @@ class Primes
     end
 
     [n_primes, table]
-  end
-
-
-  def self.is_prime?(num)
-    return false if num <= 1
-    (2..Math.sqrt(num).floor).each do |i|
-      return false if num % i == 0
-    end
-    true
-  end
-
-  def self.first_n_primes(n)
-    primes = []
-    i = 2
-    while primes.length < n
-      if is_prime?(i)
-        primes.push(i)
-      end
-      i +=1
-    end
-    primes
   end
 
 
